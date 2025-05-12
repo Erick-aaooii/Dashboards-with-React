@@ -17,7 +17,7 @@ export default function RequireAuth({ children }: RequireAuthProps) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) {
-        navigate('/'); // Redireciona para a tela de login
+        navigate('/login'); // Redireciona para a tela de login
       } else {
         setLoading(false); // Está logado, pode mostrar a rota
       }

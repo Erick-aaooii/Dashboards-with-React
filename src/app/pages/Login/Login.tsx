@@ -15,7 +15,7 @@ export default function Login() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user?.email === emailPermitido) {
-        navigate('/');
+        navigate('/login');
       }
     });
     return () => unsubscribe();
